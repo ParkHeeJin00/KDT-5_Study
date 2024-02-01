@@ -58,7 +58,7 @@ work1()
 
 ### 1번
 
-'''python
+```python
 subDF = pd.read_csv('../DATA/subwaytime.csv',usecols=[1,3,11,13], header=0, names=['노선명','지하철명','7시 하차','8시 하차'])
 subDF.dropna(inplace=True)
 
@@ -84,6 +84,7 @@ plt.figure(figsize=(10,5))
 plt.bar(xList,yList)
 plt.title('출근 시간대 지하철 노선별 최대 하차 인원 및 하차역')
 plt.xticks(rotation = 80)
-'''
+```
+
 
 ![image](https://github.com/ParkHeeJin00/KDT-5_Study/assets/155441547/447cc699-f875-422b-83a8-01bf13bbcee3)
