@@ -54,7 +54,7 @@ def get_post_data(post, json_result_list, cnt):
 def main():
     node = 'news'  # 크롤링 대상
     # search_text = input('검색어를 입력하세요: ')
-    search_text = '인공지능'
+    search_text = ('데이터사이언티스트')
     cnt = 0
     json_result_list = []
     json_response = get_naver_search(node, search_text, 1, 100)

@@ -32,11 +32,13 @@ else:
     font = r'/usr/share/fonts/truetype/name/NanumMyeongjo.ttf'
 
 img_mask = np.array(Image.open('../souse/cloud.png')) # 워드클라우드 마스크(모양)
+
 wc = WordCloud(font_path=path, width=400, height=400,
 background_color="white", max_font_size=200,# 제일 많이 나온 단어의 사이즈
 repeat=False,# 단어를 반복해서 출력할지
 colormap='inferno', mask=img_mask) # 마스크 파라미터 : np.array type만 가능
 cloud = wc.generate_from_frequencies(dict(tags))
+
 # 생성된 WordCloud를 test.jpg로 보낸다.
 #cloud.to_file('test.jpg')
 plt.figure(figsize=(10, 8))
