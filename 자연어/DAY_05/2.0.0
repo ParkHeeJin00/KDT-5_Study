@@ -1,0 +1,27 @@
+Channels:
+ - conda-forge
+ - defaults
+ - pytorch
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: C:\Users\mybae\anaconda3\envs\TORCH_NLP38
+
+  added / updated specs:
+    - portalocker
+
+
+The following NEW packages will be INSTALLED:
+
+  portalocker        conda-forge/win-64::portalocker-2.8.2-py38haa244fe_1 
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
