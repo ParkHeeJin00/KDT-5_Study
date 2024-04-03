@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14d7c2b9-f94a-44d5-91fb-9aee41d0e106" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../DAY_05/ex_iris_dataset_model.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DAY_06/ex_mnist_mlp copy.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DAY_06/ex_mnist_mlp.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DAY_06/ex_model_metrics.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DAY_07/ex_weight.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work_0315.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work_0315_img_다중분류.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAY_05/ex_custom_dataset.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../DAY_05/ex_custom_dataset.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2dtqT3U0oCMqeDyKXuPcS68X6T5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/kdp/KDT-5/KDT-5_Study/DL/work",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="14d7c2b9-f94a-44d5-91fb-9aee41d0e106" name="변경" comment="" />
+      <created>1710837726360</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710837726360</updated>
+      <workItem from="1710837727491" duration="313000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

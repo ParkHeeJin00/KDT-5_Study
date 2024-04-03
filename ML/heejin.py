@@ -5,6 +5,7 @@ from sklearn.linear_model import LinearRegression, LogisticRegression, Ridge, La
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.ensemble import RandomForestRegressor, VotingRegressor
 
 def print_scatter(nrows, ncols, targetSR, featureDF):
 
@@ -38,7 +39,7 @@ def print_box(nrows, ncols,targetSR, featureDF):
     for i in featureDF.columns:
         plt.subplot(nrows, ncols, n)
         plt.boxplot(featureDF[i])
-        plt.xlabel(targetSR.name)
+        plt.xticks({1:targetSR.name})
         plt.title(f'{i}')
         n += 1
     plt.tight_layout()
@@ -74,14 +75,16 @@ def fill_outliers_z(sr, hold, fill_value):
 
 def find_outlier_iqr(df,threshold = 1.5):
     for i in df.columns:
-        q1 = df[i].quantile(0.25)
-        q3 = df[i].quantile(0.75)
-        iqr = q3 - q1
+        if df[i].dtype in ['int64', 'float64']:
+            q1 = df[i].quantile(0.25)
+            q3 = df[i].quantile(0.75)
+            iqr = q3 - q1
 
-        lower = q1 - iqr * threshold
-        upper = q3 + iqr * threshold
+            lower = q1 - iqr * threshold
+            upper = q3 + iqr * threshold
 
-        print(f'iqr - {i}의 이상치 개수 : {df[(df[i] < lower)&(df[i] > upper)].count()}')
+            print(f'iqr - {i}의 이상치 개수 : {df[(df[i] < lower) | (df[i] > upper)].shape[0]}')
+
 
 def fill_outliers_iqr(sr, threshold, fill_value):
 
@@ -105,7 +108,7 @@ def fill_outliers_iqr(sr, threshold, fill_value):
     return sr_copy
 
 
-def find_random_state(featureDF,targetSR):
+def find_random_state(featureDF,targetSR, model):
     # 최적 random_state 값
     random_state_list = []
     for i in range(1,51):
@@ -114,7 +117,6 @@ def find_random_state(featureDF,targetSR):
         scaler.fit(xtrain)
         xtrain_scaled = scaler.transform(xtrain)
         xtest_scaled = scaler.transform(xtest)
-        model = LinearRegression() # model 종류에 따라 차이남
         model.fit(xtrain_scaled,ytrain)
         model.score(xtest_scaled,ytest)
         random_state_list.append(model.score(xtest_scaled,ytest))
