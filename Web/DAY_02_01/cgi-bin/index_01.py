@@ -1,3 +1,5 @@
+# 기준 경로 : DAY_02_01
+
 # 모듈 로딩
 import cgi, sys, codecs, os, datetime
 import cgitb
@@ -29,7 +31,7 @@ def print_html(filename, data = ''):
 
 # 데이터 추출
 if 'data' in form and 'no' in form:
-    result = form.getvalue('data') + '-' + form.getvalue('no')
+    result = form.getvalue('data') + '-' + form.getvalue('no')  # = form['data'] + '-' + form['no]
 else:
     result = "No Data"
 
