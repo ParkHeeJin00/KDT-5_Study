@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body em { color: red; } /* body 안의 자손 em 요소 */
+    body > h1 { color: blue; } /* body 안의 직계 자식 h1 요소 */
+
+    a:link { /* 아직 방문되지 않은 링크의 색상 */
+        text-decoration:none;
+        color: blue;
+        background-color: white;
+        }
+    a:visited { /* 방문된 링크의 색상 */
+        text-decoration: none;
+        color: green;
+        }
+    a:hover { /* 마우스가 링크위에 있을 때 색상 */
+        text-decoration: none;
+        color: white;
+        background-color: blue;
+        }
+
+</style>
+</head>
+
+<body>
+<h1>This headline is <em>very</em> important</h1>
+<p>
+    <ul>
+        <li><h1>목록 1</h1></li>
+        <li><h1>목록 2</h1></li>
+    </ul>
+</p>
+<a href = 'http://www.naver.com' target = '_blank'> 네이버 바로가기</a>
+</body>
+</html>
