@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input img</title>
+</head>
+<body>
+    <h2>이미지 선택</h2><hr color="blue" size="2">
+
+    <form action="./cgi-bin/send_data.py" method="get">  <!-- 서버에 파일을 제출해주는 역할 -->
+        <input type="file" name = "img_file" placeholder="파일 선택"><br>
+        <input type="text" name = "message" placeholder="전달 메세지"><br>
+        <input type="submit" value="업로드"> <!-- 서버로 제출하겠다 -->
+        <input type="reset" value="초기화">
+    </form>
+</body>
+</html>

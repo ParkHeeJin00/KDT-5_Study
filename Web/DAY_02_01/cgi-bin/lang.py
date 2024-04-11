@@ -1,4 +1,5 @@
-# 기준 경로 : DAY_02_01/cgi-bin
+# 기준 경로 : DAY_02_01
+# cgi-bin 내의 파일은 모두 url로 판단
 
 # 모듈 로딩
 import cgi, sys, codecs, os, datetime
@@ -6,7 +7,8 @@ import cgitb
 import torch
 import pickle
 import torch.nn as nn
-from konlpy.tag import Mecab
+# from konlpy.tag import Mecab
+from konlpy.tag import Okt
 
 # 에러 확인
 cgitb.enable()  # Error 확인
@@ -69,14 +71,15 @@ vocab = load_vocab('model/vocab_tk.pkl')
 
 # 모델 생성
 
-mecab = Mecab()
+# mecab = Mecab()
+tok = Okt()
 
 model = torch.load('model/model_tkLang.pt')
 
 def predict(model, text):
     text_pipeline = lambda x: vocab(x)
     with torch.no_grad():
-        text = torch.tensor(text_pipeline(mecab.morphs(text)), dtype=torch.int64)
+        text = torch.tensor(text_pipeline(tok.morphs(text)), dtype=torch.int64)
         offsets = torch.tensor([0])
         output = model(text, offsets)
         sigmoid = nn.Sigmoid()
@@ -97,4 +100,4 @@ else:
 
 
 # 브라우징 : 함수 실행
-print_html(filepath, result)
+print_html(filepath, text, result)
