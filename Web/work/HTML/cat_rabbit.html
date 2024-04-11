@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Rabbit Classify</title>
+</head>
+<body>
+    <center>
+        <h1>Cat Rabbit Classify
+            <h2>이미지 선택</h2><hr color="blue" size="2">
+
+            <form action="/cgi-bin/send_cat_rabbit.py" method="post" enctype="multipart/form-data">  
+                
+        
+                <input type="file" name = "img_file" accept = "image/png, image/jpeg" placeholder="파일 선택"><br>
+                                                                <!-- png랑 jpeg 파일만 보이게 해달라 -->
+                <input size="40%" type="text" name = "message" placeholder="정답을 입력해주세요.     ex : rabbit"><br>
+                <input type="submit" value="업로드"><br> <!-- 서버로 제출하겠다 -->
+                <input type="reset" value="초기화">
+            </form>
+        </h1>
+    </center>
+    
+</body>
+</html>

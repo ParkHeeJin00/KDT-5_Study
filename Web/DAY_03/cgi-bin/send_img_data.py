@@ -1,6 +1,7 @@
 # 모듈 로딩
 import cgi, sys, codecs, os, datetime
 import cgitb
+import datetime
 
 cgitb.enable()  # Error 확인
 
@@ -12,9 +13,25 @@ form = cgi.FieldStorage()
 
 # 클라이언트의 요청 데이터 추출
 if 'img_file' in form and 'message' in form:
-    filename = form['img_file']  # form.getvalues('img_file')
+    fileitem = form['img_file']  # form.getvalues('img_file')
+
+    # 서버에 이미지 파일 저장 --------------------------------
+    img_file = fileitem.filename
+
+    suffix = datetime.datetime.now().strftime('%y%m%d_%H%M%S')
+
+
+    save_path = f'./image/{suffix}_{img_file}'
+    with open(save_path, 'wb') as f:
+        f.write(fileitem.file.read())
+    # -------------------------------------------------------
+
+    img_path = f'../image/{suffix}_{img_file}'
+
     msg = form['message']  # form.getvalues('message')
-    
+else:
+    img_path = 'None'
+    msg = 'None'
 
 
 # 요청에 대한 응답 HTML
@@ -25,9 +42,5 @@ print()  # 무조건 한줄 띄어야 함
 # HTML Body
 print('<TITLE>CGI</TITLE>')
 print('<H1>CGI</H1>')
-print(f'hello CGI {form}')
-print(f'<img src = {filename}>')
+print(f'<img src = {img_path}>')
 print(f'<h3>{msg}</h3>')
-
-
-
