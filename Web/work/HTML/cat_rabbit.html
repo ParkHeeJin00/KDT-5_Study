@@ -8,14 +8,14 @@
 <body>
     <center>
         <h1>Cat Rabbit Classify
-            <h2>이미지 선택</h2><hr color="blue" size="2">
+            <h2>이미지 선택</h2><hr color="pink" size="2">
 
             <form action="/cgi-bin/send_cat_rabbit.py" method="post" enctype="multipart/form-data">  
                 
         
                 <input type="file" name = "img_file" accept = "image/png, image/jpeg" placeholder="파일 선택"><br>
                                                                 <!-- png랑 jpeg 파일만 보이게 해달라 -->
-                <input size="40%" type="text" name = "message" placeholder="정답을 입력해주세요.     ex : rabbit"><br>
+                <input size="40%" type="text" name = "message" placeholder="정답을 입력해주세요.     rabbit or cat"><br>
                 <input type="submit" value="업로드"><br> <!-- 서버로 제출하겠다 -->
                 <input type="reset" value="초기화">
             </form>

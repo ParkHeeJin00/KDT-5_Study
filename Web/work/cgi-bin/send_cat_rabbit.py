@@ -128,7 +128,7 @@ print()  # 무조건 한줄 띄어야 함
 print('<TITLE>Cat Rabbit Classify</TITLE>')
 print(f'''
 <center>
-      <H1>Cat Rabbit Clssify</H1><br>
+      <H1>Cat Rabbit Clssify</H1><hr color="pink" size="2">
       <img src = {img_path}><br>
 
       <h2>{res}</h2><br>

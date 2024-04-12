@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Rabbit Classify</title>
+</head>
+<body>
+    <center>
+        <h1>Stock Regression</h1>
+            <h2>아래 값을 입력해주세요.</h2><hr color="blue" size="2">
+
+            <form action="/cgi-bin/send_stock.py" method="post" enctype="multipart/form-data">  
+
+                <input size="40%" type="number" name = "open" placeholder="시작가 입력"><br>
+                <input size="40%" type="number" name = "high" placeholder="고가 입력"><br>
+                <input size="40%" type="number" name = "low" placeholder="저가 입력"><br>
+                <input size="40%" type="number" name = "volume" placeholder="거래량 입력"><br><br>
+                <input type="submit" value="업로드"><br> <!-- 서버로 제출하겠다 -->
+                <input type="reset" value="초기화">
+            </form>
+    </center>
+    
+</body>
+</html>
