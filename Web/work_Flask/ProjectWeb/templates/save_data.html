@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static', filename='css/model.css')}}" rel="stylesheet">
+    <style>
+        h1 {
+            padding: 15px;
+        }
+    </style>
+    <title>Genres Classify</title>
+</head>
+<body>       
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+        <label><h1>포스터 이미지</h1></label>
+        <img src="{{img_path}}" alt="Movie Poster" width="320" height="450">
+        <p style="font-weight: bold; font-size: 24px;">
+            [Predicted Genre]<br>
+            {{res}}
+        </p>
+    </center>
+
+</body>
+</html>

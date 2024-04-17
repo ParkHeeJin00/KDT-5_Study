@@ -6,8 +6,13 @@ def create_app():
       app = Flask(__name__)
 
       # bp등록
-      from .views import main_0416
-      app.register_blueprint(main_0416.bp)
-      
+      from .views import view
+      app.register_blueprint(view.dataBP)
+
+
+      @app.route('/')
+      def index():
+            return render_template('index.html')
+
       return app
 

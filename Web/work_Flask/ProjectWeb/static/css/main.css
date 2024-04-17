@@ -2,7 +2,7 @@
 
 body {
     /* 배경 이미지 설정 */
-    background-image: url('./image/main_bg.png'); /* 이미지 파일 경로 */
+    background-image: url('../image/main_bg.png'); /* 이미지 파일 경로 */
     background-size: cover;
     background-repeat: no-repeat;}
 

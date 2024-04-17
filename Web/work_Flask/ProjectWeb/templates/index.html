@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie main</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link href='https://fonts.googleapis.com/css2?family=Binggrae&display=swap' rel="stylesheet">
+
+    <style>   
+    h1 {
+        font-family: 'Binggrae', sans-serif;
+        font-size: 90px;
+        padding: 5px; /* 텍스트 주변에 여백 추가 */
+        color: navy; /* 텍스트 색상을 남색으로 설정 */
+    }
+    </style>
+</head>
+<body>
+    <center>
+        <h1 style = "font-size: 100px;">포스터로 장르 예측하깅</h1>
+        <a href = "{{ url_for('project.input_data') }}">
+        <img src="{{ url_for('static', filename='image/pop.png') }}" alt="popcorn">
+        </a>
+    </center>
+</body>
+</html>

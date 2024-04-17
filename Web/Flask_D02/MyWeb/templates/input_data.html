@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>inputdata</title>
+    <link href="{{url_for('static', filename='css/style_2.css')}}" rel = "stylesheet">
+    <style>
+        body {
+            text-align: center; /* 부모 요소를 가운데 정렬합니다. */
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto; /* 수평 가운데 정렬 */
+            width: 400px; /* form의 너비를 조절하여 수평으로 확장되는 너비를 제어 */
+            height: 200px;
+            border: 1px solid rgb(88, 15, 30);
+            border-radius: 5px;
+            padding: 20px;
+    
+        }
+    
+        input {
+            width: 100%;
+            height: 30px;
+            border: 1px solid rgb(88, 15, 30);
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* padding과 border를 포함한 너비를 조절 */
+            margin-bottom: 10px; /* 각 입력 요소 사이에 여백 추가 */
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <center> 
+
+        <h1>input data</h1>
+        <br>
+        <br>
+        <br>
+        <!-- <form method="post" action="/input/save_post"> -->
+            <form method="{{method}}"action="{{action}}" enctype="multipart/form-data">
+                <input type="text" name="value" placeholder="value">
+                <input type="text" name="message" placeholder="message">
+                <input type="file" name = "image" accept = "image/png, image/jpeg" placeholder="파일 선택">
+                <input type="submit">
+            </form>
+
+    </center>
+    <br>
+    <br>ㅅ
+    <br>
+
+</body>
+</html>
