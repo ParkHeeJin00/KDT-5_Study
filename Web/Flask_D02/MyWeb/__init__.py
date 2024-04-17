@@ -21,6 +21,11 @@ def create_app():
     @app.route('/')
     def index():
         return render_template('index.html')
+    
+    @app.route('/<popcorn_color>')
+    def popcorn_col(popcorn_color):
+        # return f"<h1>Give me the {popcorn_color} color popcorn"
+        return render_template(f'color_popcorn.html', popcorn_color=popcorn_color)
 
 
     ## Flask Server 인스턴스 반환

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{url_for('static', filename = 'css/style_2.css')}}" rel = "stylesheet">
+
+</head>
+<body>
+    <center>
+        <h1 style = "font-size: 80px;">Yes!!</h1>
+        <h1 style = "font-size: 80px;">Give you {{popcorn_color}} popcorn</h1>
+        <img src="{{ url_for('static', filename='image/{}_pop.png'.format(popcorn_color)) }}" alt="popcorn">
+        <button onclick="goToIndex()">Do you want a white popcorn?</button><br>
+    </center>
+    <script>
+        function goToIndex() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>
