@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+
+body {
+    /* 배경 이미지 설정 */
+    background-image: url('./image/main_bg.png'); /* 이미지 파일 경로 */
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+h2{color:darkblue}
+
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #003366; /* 찐한 남색 계열 */
+    border: 2px solid #003366; /* 버튼 배경색과 동일한 색으로 변경 */
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #648dae; /* 약간 밝은 남색 계열 */
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #003366, 0 0.625em 0 0 #bcd4e3; /* 버튼 배경색과 동일한 색으로 변경 */
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more:hover {
+    background: #001f4d; /* 더 진한 남색 계열 */
+    transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+    box-shadow: 0 0 0 2px #001f4d, 0 0.5em 0 0 #bcd4e3; /* 버튼 배경색과 동일한 색으로 변경 */
+    transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+    background: #001f4d; /* 더 진한 남색 계열 */
+    transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+    box-shadow: 0 0 0 2px #001f4d, 0 0 #bcd4e3; /* 버튼 배경색과 동일한 색으로 변경 */
+    transform: translate3d(0, 0, -1em);
+}

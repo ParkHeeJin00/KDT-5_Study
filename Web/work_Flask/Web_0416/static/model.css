@@ -1,0 +1,54 @@
+/* 헤더와 내용을 아래로 내리기 */
+h2 {
+    /* 헤더의 위쪽 여백 설정하여 아래로 이동 */
+    margin-top: 250px; /* 원하는 만큼의 여백 크기 지정 (예: 50px) */
+}
+
+
+
+body {
+    /* 배경 이미지 설정 */
+    background-image: url('./image/model_bg.png'); /* 이미지 파일 경로 */
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+
+h2{color:aliceblue}
+h3{color:white}
+h1{color:white}
+p{color:white}
+p{font-size:20px}
+
+
+/* 제출 버튼에 스타일 적용 */
+.submit-button {
+    /* 버튼의 크기와 여백 설정 */
+    width: 70px; /* 버튼 너비 */
+    height: 70px; /* 버튼 높이 */
+    padding: 20px; /* 내부 여백 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 마우스 호버 시 커서 모양 변경 */
+    background-image: url('./image/pop.png'); /* 이미지 파일 경로 */
+    background-size: cover; /* 이미지를 버튼에 꽉 차게 조정 */
+    background-position: center; /* 이미지를 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 */
+    /* 원하는 배경 색상 설정 (이미지가 로드되지 않았거나 버튼이 채워지지 않는 부분을 위한 색상) */
+    background-color: transparent; /* 배경 색상 투명으로 설정 */
+}
+
+fieldset {
+    max-width: 600px;
+    /* 투명한 검은색 배경 (RGBA 값의 마지막 값이 투명도) */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 필요에 따라 다른 스타일링 속성 추가 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0 auto; 
+}
+
+input[type=file] {
+    background-color: #800020; /* 또는 원하는 남색 값 */
+    color: white; /* 텍스트 색상을 변경하여 가시성을 유지할 수 있습니다. */
+    /* 기타 스타일링 속성 추가 */
+}

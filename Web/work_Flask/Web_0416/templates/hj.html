@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='model.css')}}">
+</head>
+</head>
+    <title>Genres Classify</title>
+
+<body>
+    <center>
+    <h2 style = "font-size: 30px;">💖 영화 포스터로 장르 분류하기 💖</h2></center>
+    
+        <fieldset>
+            <center>
+                <label><h3> 이미지 선택 </h3></label>
+            <p>
+                <form action="../cgi-bin/hj_predict.py" method="post" enctype="multipart/form-data">  
+                    <input type="file" name="img_file" accept="image/png, image/jpeg" placeholder="파일 선택" ><br>
+                    <input type="submit" value="" class="submit-button"><br> <!-- 서버로 제출하겠다 -->
+                    </form>
+            </p>
+        </fieldset>
+        </center>
+</body>
+</html>
+
