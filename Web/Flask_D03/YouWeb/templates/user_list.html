@@ -1,0 +1,27 @@
+{% extends "basic.html" %}
+
+{% block title %} 회원목록 {% endblock %}
+
+{% block header %} <h2> <font color='blue'>[현재등록회원]</font></h2>{% endblock %}
+{% block content %}
+    {% if user_list %}
+        <Table >
+            <tr bgcolor='lightgray'>
+                <td>아이디</td>
+                <td>이름</td>
+                <td>이메일</td>
+            </tr>
+        {% for user in user_list %}
+            <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }} </td>
+            <td>{{ user.email }} </td>
+            <tr>
+        {% endfor %}
+        </Table>
+    {% else %}
+        <p><font color='red'>등록된 회원없음</font></p> 
+    {% endif %}
+
+{% endblock %}
+
