@@ -1,0 +1,15 @@
+{% extends "basic.html" %}
+
+{% block title %} 질문 등록 {% endblock %}
+
+{% block header %} <h2> [새로운 질문 등록] </h2>{% endblock %}
+
+{% block content %} 
+
+
+<form action="{{ url_for('main.input_finish') }}" method="POST">
+    <label> 제  목 </label><input type="text" name="title"> <br/>
+    <label> 질  문 </label><input type="text" name="content"> <br/>
+    <input type="submit" value="등록"> 
+</form>
+{% endblock %}
