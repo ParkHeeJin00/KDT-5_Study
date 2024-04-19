@@ -1,7 +1,11 @@
     ## 모듈로딩
 from flask import Blueprint, render_template, request, redirect, url_for
 from YouWeb.models import Question
+from datetime import datetime
+from YouWeb import db
 
+
+# pybo == YouWeb
 # BP 인스턴스 생성
 bp = Blueprint('main', 
                __name__,
@@ -26,5 +30,8 @@ def input_finish():
     # 질문 입력 페이지 출력
     req_dict = request.form.to_dict()
     title = req_dict.get('title')
-    content = req_dict.get('content')       
+    content = req_dict.get('content')   
+    create_date = datetime.now()    
+    db.session.add(Question(subject = title, content = content, create_date = create_date))
+    db.session.commit()  # db에 변경을 적용할 때
     return render_template('question_input_finish.html', title = title, content = content)

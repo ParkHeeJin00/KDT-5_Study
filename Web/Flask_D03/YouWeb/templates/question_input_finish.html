@@ -2,12 +2,19 @@
 
 {% block title %} 질문 등록 {% endblock %}
 
-{% block header %} <h2> [질문 등록 완료] </h2>{% endblock %}
+{% block header %} 
+<center>
+    <h2> [질문 등록 완료] </h2>
+</center>
+{% endblock %}
 
 {% block content %} 
-<label> 제  목 </label><h3>{{title}}</h3>
-<label> 질  문 </label><h3> {{content}}</h3> <br/>
-<button 
+<center>
+
+    <label> 제  목 </label><h3>{{title}}</h3>
+    <label> 질  문 </label><h3> {{content}}</h3> <br/>
+    <button 
     onclick="location.href='/'"
     > 질문 목록으로 </button>
+</center>
 {% endblock %}

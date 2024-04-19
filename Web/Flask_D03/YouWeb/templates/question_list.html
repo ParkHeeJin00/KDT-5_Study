@@ -2,18 +2,29 @@
 
 {% block title %} wlfans {% endblock %}
 
-{% block header %} <h2> <font color='blue'>[질문 게시판]</font></h2>{% endblock %}
+{% block header %} 
+<center>
+<h2> <font color='blue'>[질문 게시판]</font></h2>
+</center>
+{% endblock %}
+
 {% block content %}
+
+<center>
     {% if question_list %}
         <Table >
             <tr bgcolor='lightgray'>
                 <td>아이디</td>
                 <td>제  목</td>
+                <td>내  용</td>
+                <td>시  간</td>
             </tr>
         {% for question in question_list %}
             <tr>
             <td>{{ question.id }}</td>
+            <td>{{ question.subject }} </td>
             <td>{{ question.content }} </td>
+            <td>{{ question.create_date }} </td>
             <tr>
         {% endfor %}
         </Table>
@@ -23,5 +34,5 @@
     <button onclick="location.href='/question/input/'">
     > 질문 등록 
     </button>
-
+</center>
 {% endblock %}
