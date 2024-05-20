@@ -1,4 +1,4 @@
-    ## 모듈로딩
+## 모듈로딩
 from flask import Blueprint, render_template, request, redirect, url_for
 from YouWeb.models import Question
 from datetime import datetime
