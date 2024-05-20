@@ -8,7 +8,7 @@ DB_NAME_SQLITE = 'app.db'
 # 다양한 DBMS URI 
 DB_SQLITE_URI = f'sqlite:///{os.path.join(BASE_DIR, DB_NAME_SQLITE)}'
                                # id : pw                 / database 이름 ( database 창 열고 show databases; / 아무거나 선택 )
-DB_MYSQL_URI = 'mysql+pymysql://root:0718@localhost:3306/test_db'
+DB_MYSQL_URI = 'mysql+pymysql://root:0718@localhost:3306/testdb'
 
 # DB_MARIA_URI = 'mariadb+mariadb://root:0718@localhost:3306/testdb'
                                     # id : pw
